@@ -1,6 +1,6 @@
 ﻿cs
 auto indent format 1
-auto insert closing-} 0
+auto insert closing-} 1
 auto insert semicolons 0
 allow expert syntax 1
 enforce array bounds 1

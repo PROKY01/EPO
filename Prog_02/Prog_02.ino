@@ -1,4 +1,4 @@
-/*	Prog_01.1
+/*	Prog_02
 	Blikani LED tam i zpet po dvou
 */
 //deklarace promennych
