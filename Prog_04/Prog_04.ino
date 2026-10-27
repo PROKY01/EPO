@@ -39,8 +39,7 @@ void loop()
 {
 	start_stop = digitalRead(A2);
 	pocetLED = digitalRead(A0) * 1 + digitalRead(A1) * 2 + 1;
-
-	if(start_stop == HIGH)
+	if(start_stop)
 	{
 		zobrazLED(pozice, pocetLED , LOW);
 		if (smer)
@@ -53,8 +52,9 @@ void loop()
 		}
 		else
 		{
-			if (--pozice <= -(pocetLED - 1)) 
+			if (--pozice == -(pocetLED - 1)) 
 			{
+
 				smer=true;
 			}
 		}
