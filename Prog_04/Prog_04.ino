@@ -7,6 +7,8 @@ char pozice=0;
 boolean smer;
 boolean start_stop;
 char pocetLED;
+int cas[]={100,200,400,800,1000,2000,4000,10000};
+char indexCasu;
 
 //metoda setup
 void setup()
@@ -20,6 +22,9 @@ void setup()
 	pinMode(A0, INPUT);
 	pinMode(A1, INPUT);
 	pinMode(A2, INPUT);
+	pinMode(A3, INPUT);
+	pinMode(A4, INPUT);
+	pinMode(A5, INPUT);
 }
 
 void zobrazLED(char startPozice, char pocet, boolean stav)
@@ -39,6 +44,7 @@ void loop()
 {
 	start_stop = digitalRead(A2);
 	pocetLED = digitalRead(A0) * 1 + digitalRead(A1) * 2 + 1;
+	indexCasu=digitalRead(A3) * 1 + digitalRead(A4) * 2 + digitalRead(A5) * 4;
 	if(start_stop)
 	{
 		zobrazLED(pozice, pocetLED , LOW);
@@ -59,6 +65,6 @@ void loop()
 			}
 		}
 		zobrazLED(pozice, pocetLED, HIGH);
-		delay(1000);
+		delay(cas[indexCasu]);
 	}
 }
