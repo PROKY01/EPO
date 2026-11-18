@@ -1,4 +1,5 @@
 //prog_07
+//prvocisla
 
 //deklarace promennych
 long cislo;
