@@ -45,6 +45,10 @@ void loop()
 				Serial.println();
 			}
 		}
+		else
+		{
+			Serial.println("Chyba rozsahu!!!");
+		}
 		Serial.print("Zadej velikost matice (2 az 10): ");
 	}
 }
